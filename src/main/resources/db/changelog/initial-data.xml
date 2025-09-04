@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.31.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="1756726150395-1" author="SKuzina">
+        <sql>
+            INSERT INTO public.wallet (id,amount) VALUES
+            ('b664497a-0175-4dbc-b9cc-423855df78b2','300.0');
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
