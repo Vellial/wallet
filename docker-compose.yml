@@ -1,0 +1,24 @@
+version: '3.6'
+services:
+  pgmaster:
+    image: postgres:17
+    container_name: master_pg
+    environment:
+      POSTGRES_DB: walletdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./mdata:/var/lib/postgresql/data
+    ports:
+      - 5434:5432
+    restart: always
+
+  springboot-app:
+    image: dobronrava/wallet:demo
+    container_name: wallet
+    ports:
+      - 8080:8080
+    volumes:
+      - ./config:/app/config/
+    restart: always
+
